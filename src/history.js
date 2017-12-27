@@ -11,7 +11,7 @@ export default (function () {
   return {
     undo: function () {
       if (undoable()) {
-        currentPosition = currentPosition - 1
+        currentPosition--
         console.warn('UNDO::', currentPosition, history);
         return history[currentPosition]
       } else {
@@ -22,7 +22,7 @@ export default (function () {
     },
     redo: function () {
       if (redoable() && history.length) {
-        currentPosition = currentPosition + 1
+        currentPosition++
         console.warn(redoable(), 'REDO::', currentPosition, history);
         return history[currentPosition]
       } else {
