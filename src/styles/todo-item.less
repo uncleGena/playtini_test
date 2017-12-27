@@ -1,0 +1,43 @@
+@import "./colors.less";
+
+.item-row {
+  display: flex;
+  align-items: center;
+  margin: 4px;
+  padding: 4px;
+  width: 100%;
+  background-color: @item-background;
+  border: 1px  solid @border-color;
+  border-radius: 3px;
+}
+
+.todo-check {
+  flex: 0 0 30px;
+}
+
+.todo-name {
+  flex: 1 1 30px;
+}
+
+.todo-button {
+  flex: 0 0 30px;
+  font-weight: bold;
+  opacity: .4;
+}
+
+.todo-button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
+
+.todo-check,
+.todo-name,
+.todo-button {
+  border: 0;
+  height: 20px;
+  background-color: transparent;
+}
+
+.todo-name:focus {
+  outline: 1px solid transparent;
+}
